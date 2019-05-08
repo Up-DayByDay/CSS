@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>新闻页</title>
 <style>
 ul {list-style:none;}
 
 .golf{
+    transform: rotate(45deg);  /*旋转45度*/
+    border-radius: 50%;  /*圆角*/
+    
     width:0;
     height:0;
-    border-width:0 30px 30px;
+    border-width:30px;
     border-style:solid;
-    border-color:transparent transparent #333;/*透明 透明  灰*/
+    border-color:transparent #333 transparent #333;/*透明 透明  灰*/
     margin:40px auto;
     position:relative;
 }
@@ -32,13 +34,15 @@ ul {list-style:none;}
 
 </li>
 <li>
-1、左右布局也可这样的道理;
+1、transform: rotate(45deg); /*旋转45度*/
 <br/>
-2、图片的剪切;  object-fit  裁剪居中
+2、border-radius: 50%;  /*圆角*/
 <br/>
-3、图片宽度自适应;  
-max-width:100% 
-
+3、width:0;
+border-width:0 30px 30px; 
+border-color:transparent #333 transparent #333;/*透明 透明  灰*/
+<br/>
+4、绝对定位时，中心点偏移。
 </li>
 </ul>
 
