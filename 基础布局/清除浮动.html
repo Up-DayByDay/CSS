@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			
+			ul {
+				list-style: none;
+			}
+
+			li:nth-child(2n) {
+
+				background: bisque;
+			}
+			.box{
+				width:500px;
+				height:500px;                  /*设置高度解决浮动*/
+				background-color: #dad4e4;     
+				border: solid 12px #f4433669;  /*solid  实线*/
+				overflow: hidden;              /*父容器使用overflow: hidden;*/
+				zoom: 1;					   /*父容器使用伪类:after  和zoom一起用*/
+			}
+			.box:after{
+				display:block;
+				clear: both;
+			}
+		</style>
+	</head>
+	<body>
+
+		<ul>
+			<li>
+				清除浮动 - 高度塌陷！！！！
+			</li>
+			
+			<li>
+				<div class="box">
+					<div style="height:400px;float: left;background-color: red">
+						aaaaaa
+					</div>
+					<div>
+						ddddddddd
+					</div>
+					<div>
+						xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+					</div>
+					<span class="item"> sassssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssddss</span>
+					
+				</div>
+			
+			
+			</li>
+
+			
+		</ul>
+
+	<body>
+</html>
